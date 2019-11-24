@@ -1,16 +1,23 @@
 package SetUpPackage;
 
+import org.aeonbits.owner.ConfigFactory;
 import org.testng.annotations.*;
 
+import UtilityPackage.InterfaceConfigProperties;
 import io.restassured.RestAssured;
 
 public class TestSetup {
 	
+	public static InterfaceConfigProperties config;
+	
 	@BeforeSuite
 	public void setUp()
 	{
-		RestAssured.baseURI = "https://api.stripe.com";
-		RestAssured.basePath = "/v1";
+		config = ConfigFactory.create(InterfaceConfigProperties.class);
+		
+		RestAssured.baseURI = config.getBaseURI();
+		RestAssured.basePath = config.getBasePath();
+
 	}
 	
 	@AfterSuite
