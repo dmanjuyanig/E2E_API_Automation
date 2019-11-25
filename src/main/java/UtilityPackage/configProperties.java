@@ -8,17 +8,17 @@ import org.aeonbits.owner.Config.Sources;
 	"file:src/test/resources/propertyfiles/config.properties"
 })
 
-public interface InterfaceConfigProperties extends Config{
+public interface configProperties extends Config{
 	
 	@Key("baseURI")
-	public String getBaseURI();
+	String getBaseURI();
 	
 	@Key("basePath")
-	public String getBasePath();
+	String getBasePath();
 	
 	@Key("validSecretKey")
-	public String getValidSecretKey();
+	String getValidSecretKey();
 	
 	@Key("customerAPIEndPoint")
-	public String getCustomerAPIEndPoint();
+	String getCustomerAPIEndPoint();
 }

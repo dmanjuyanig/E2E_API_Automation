@@ -12,9 +12,9 @@ public class SampleTestCase extends TestSetup{
 	
 	
 	@Test (priority=1)
-	public void ValidateCreateCustomerAPIWithValidSecretKey()
+	public void ValidateCreateCusAPIWithValidSK()
 	{
-		Response response = given().auth().basic("sk_test_4eC39HqLyjWDarjtT1zdp7dc", "")
+		Response response = given().auth().basic(config.getValidSecretKey(), "")
 							.formParam("email", "rest@gmail.com")
 							.formParam("description", "Test User")
 							.post("/customers");

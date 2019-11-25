@@ -1,19 +1,23 @@
 package SetUpPackage;
 
 import org.aeonbits.owner.ConfigFactory;
-import org.testng.annotations.*;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.AfterSuite;
 
-import UtilityPackage.InterfaceConfigProperties;
+import UtilityPackage.ExcelReader;
+import UtilityPackage.configProperties;
 import io.restassured.RestAssured;
 
 public class TestSetup {
 	
-	public static InterfaceConfigProperties config;
+	public static configProperties config;
+	
+	public static ExcelReader excel = new ExcelReader(System.getProperty("user.dir", "\\src\\test\\resources\\TestData\\TestData.xlsx"));
 	
 	@BeforeSuite
 	public void setUp()
 	{
-		config = ConfigFactory.create(InterfaceConfigProperties.class);
+		config = ConfigFactory.create(configProperties.class);
 		
 		RestAssured.baseURI = config.getBaseURI();
 		RestAssured.basePath = config.getBasePath();
