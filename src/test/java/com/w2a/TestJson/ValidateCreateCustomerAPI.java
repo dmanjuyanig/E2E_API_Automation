@@ -7,32 +7,56 @@ import org.testng.annotations.Test;
 
 import APIPackage.CreateCustomerAPI;
 import SetUpPackage.TestSetup;
+import UtilityPackage.DataProviderClass;
+import UtilityPackage.TestUtils;
 import io.restassured.response.Response;
 
 
 public class ValidateCreateCustomerAPI extends TestSetup{
 	
-	@Test
+	/*@Test(dataProviderClass = DataProviderClass.class, dataProvider="dp")
 	public void validateAPIWithValidSecretKey(Hashtable<String, String> data)
 	{
-		Response response = CreateCustomerAPI.sendPostRequestToCreateCustomerWithInvalidSecretKey(data.get("email"), data.get("description"), 
+		Response response = CreateCustomerAPI.sendPostRequestToCreateCustomerWithValidSecretKey(data.get("email"), data.get("description"), 
 				config.getValidSecretKey(), config.getCustomerAPIEndPoint());
 		
-		response.statusCode();
+		response.prettyPrint();
 		
+		//Assert to verify the status code
 		Assert.assertEquals(response.statusCode(), 200);
-	}
-	
-	@Test
-	public void validateAPIWithInvalidSecretKey()
-	{
 		
+		//Assert to json response body contains ID field
+		Assert.assertTrue(TestUtils.jsonHasKey(response.asString(), "id"));
+		
+		//Assert that that ID field is not null
+		String idValue = response.jsonPath().get("id");
+		Assert.assertNotNull(idValue);
+	}*/
+	
+	@Test(dataProviderClass = DataProviderClass.class, dataProvider="dp")
+	public void validateAPIWithInvalidSecretKey(Hashtable<String, String> data)
+	{
+		Response response = CreateCustomerAPI.sendPostRequestToCreateCustomerWithInvalidSecretKey(data.get("email"), data.get("description"), 
+				config.getInValidSecretKey(), config.getCustomerAPIEndPoint());
+		
+		response.prettyPrint();
+		
+		//Assert to verify the status code
+		Assert.assertEquals(response.statusCode(), 401);
+		
+		//Assert to json response body contains ID field
+		Assert.assertTrue(TestUtils.jsonHasKey(response.asString(), "error"));
+		
+		//Assert that that ID field is not null
+		String errormessage = response.jsonPath().get("message");
+		System.out.println(errormessage);
+		//Assert.assertNotNull(idValue);
 	}
 	
-	@Test
+	/*@Test
 	public void validateAPIWithValidParameters()
 	{
 		
-	}
+	}*/
 
 }

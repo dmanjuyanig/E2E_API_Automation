@@ -19,6 +19,9 @@ public interface configProperties extends Config{
 	@Key("validSecretKey")
 	String getValidSecretKey();
 	
+	@Key("invalidSecretKey")
+	String getInValidSecretKey();
+	
 	@Key("customerAPIEndPoint")
 	String getCustomerAPIEndPoint();
 }

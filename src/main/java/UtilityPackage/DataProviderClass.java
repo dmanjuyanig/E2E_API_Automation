@@ -10,7 +10,7 @@ import SetUpPackage.TestSetup;
 public class DataProviderClass extends TestSetup{
 	
 	@DataProvider(name = "dp")
-	public Object[][] getData(Method m) 
+	public static Object[][] getData(Method m) 
 	{
 		String sheetName = m.getName(); //getting the name of testcase method
 		int rows = excel.getRowCount(sheetName);// 3

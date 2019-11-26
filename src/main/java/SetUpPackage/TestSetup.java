@@ -12,7 +12,7 @@ public class TestSetup {
 	
 	public static configProperties config;
 	
-	public static ExcelReader excel = new ExcelReader(System.getProperty("user.dir", "\\src\\test\\resources\\TestData\\TestData.xlsx"));
+	public static ExcelReader excel = new ExcelReader("./src/test/resources/TestData/TestData.xlsx");
 	
 	@BeforeSuite
 	public void setUp()
