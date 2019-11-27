@@ -15,7 +15,7 @@ import io.restassured.response.Response;
 
 public class ValidateCreateCustomerAPI extends TestSetup{
 	
-	@Test(dataProviderClass = DataProviderClass.class, dataProvider="dp")
+	@Test(dataProviderClass = DataProviderClass.class, dataProvider="dp", priority =1)
 	public void validateAPIWithValidSecretKey(Hashtable<String, String> data)
 	{
 		Response response = CreateCustomerAPI.sendPostRequestToCreateCustomerWithValidSecretKey(data.get("email"), data.get("description"), 
@@ -34,7 +34,7 @@ public class ValidateCreateCustomerAPI extends TestSetup{
 		Assert.assertNotNull(idValue);
 	}
 	
-	@Test(dataProviderClass = DataProviderClass.class, dataProvider="dp")
+	@Test(dataProviderClass = DataProviderClass.class, dataProvider="dp", priority =2)
 	public void validateAPIWithInvalidSecretKey(Hashtable<String, String> data)
 	{
 		Response response = CreateCustomerAPI.sendPostRequestToCreateCustomerWithInvalidSecretKey(data.get("email"), data.get("description"), 
@@ -58,7 +58,7 @@ public class ValidateCreateCustomerAPI extends TestSetup{
 		Assert.assertNull(idValue);
 	}
 	
-	@Test(dataProviderClass = DataProviderClass.class, dataProvider="dp")
+	@Test(dataProviderClass = DataProviderClass.class, dataProvider="dp", priority =3)
 	public void validateAPIWithValidParameters(Hashtable<String, String> data)
 	{
 		Response response = CreateCustomerAPI.sendPostRequestToCreateCustomerWithValidSecretKey(data.get("email"), data.get("description"), 
@@ -77,7 +77,7 @@ public class ValidateCreateCustomerAPI extends TestSetup{
 		Assert.assertNotNull(idValue);
 	}
 	
-	@Test(dataProviderClass = DataProviderClass.class, dataProvider="dp")
+	@Test(dataProviderClass = DataProviderClass.class, dataProvider="dp",priority =4)
 	public void validateAPIWithInvalidParameter(Hashtable<String, String> data)
 	{
 		Response response = CreateCustomerAPI.sendPostRequestToCreateCustomerWithValidSecretKey(data.get("email"), data.get("description"), 
