@@ -1,4 +1,4 @@
-package com.w2a.TestJson;
+package TestJson;
 
 import static io.restassured.RestAssured.given;
 

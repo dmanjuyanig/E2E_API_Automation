@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" ignored="0" total="8" passed="8">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="6210" started-at="2019-11-26T10:59:20Z" finished-at="2019-11-26T10:59:27Z">
+  <suite name="Default suite" duration-ms="11914" started-at="2019-11-27T06:04:14Z" finished-at="2019-11-27T06:04:26Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="6210" started-at="2019-11-26T10:59:20Z" finished-at="2019-11-26T10:59:27Z">
-      <class name="com.w2a.TestJson.ValidateCreateCustomerAPI">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.w2a.TestJson.ValidateCreateCustomerAPI@42a48628]" name="setUp" is-config="true" duration-ms="724" started-at="2019-11-26T10:59:20Z" finished-at="2019-11-26T10:59:20Z">
+    <test name="Default test" duration-ms="11914" started-at="2019-11-27T06:04:14Z" finished-at="2019-11-27T06:04:26Z">
+      <class name="TestJson.ValidateCreateCustomerAPI">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:TestJson.ValidateCreateCustomerAPI@42a48628]" name="setUp" is-config="true" duration-ms="618" started-at="2019-11-27T06:04:14Z" finished-at="2019-11-27T06:04:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validateAPIWithInvalidSecretKey(java.util.Hashtable)[pri:0, instance:com.w2a.TestJson.ValidateCreateCustomerAPI@42a48628]" name="validateAPIWithInvalidSecretKey" duration-ms="4097" started-at="2019-11-26T10:59:20Z" data-provider="dp" finished-at="2019-11-26T10:59:24Z">
+        <test-method status="PASS" signature="validateAPIWithInvalidSecretKey(java.util.Hashtable)[pri:0, instance:TestJson.ValidateCreateCustomerAPI@42a48628]" name="validateAPIWithInvalidSecretKey" duration-ms="4442" started-at="2019-11-27T06:04:14Z" data-provider="dp" finished-at="2019-11-27T06:04:19Z">
           <params>
             <param index="0">
               <value>
@@ -22,7 +22,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateAPIWithInvalidSecretKey -->
-        <test-method status="PASS" signature="validateAPIWithInvalidSecretKey(java.util.Hashtable)[pri:0, instance:com.w2a.TestJson.ValidateCreateCustomerAPI@42a48628]" name="validateAPIWithInvalidSecretKey" duration-ms="744" started-at="2019-11-26T10:59:24Z" data-provider="dp" finished-at="2019-11-26T10:59:25Z">
+        <test-method status="PASS" signature="validateAPIWithInvalidSecretKey(java.util.Hashtable)[pri:0, instance:TestJson.ValidateCreateCustomerAPI@42a48628]" name="validateAPIWithInvalidSecretKey" duration-ms="588" started-at="2019-11-27T06:04:19Z" data-provider="dp" finished-at="2019-11-27T06:04:19Z">
           <params>
             <param index="0">
               <value>
@@ -33,7 +33,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateAPIWithInvalidSecretKey -->
-        <test-method status="PASS" signature="validateAPIWithInvalidSecretKey(java.util.Hashtable)[pri:0, instance:com.w2a.TestJson.ValidateCreateCustomerAPI@42a48628]" name="validateAPIWithInvalidSecretKey" duration-ms="651" started-at="2019-11-26T10:59:25Z" data-provider="dp" finished-at="2019-11-26T10:59:26Z">
+        <test-method status="PASS" signature="validateAPIWithInvalidSecretKey(java.util.Hashtable)[pri:0, instance:TestJson.ValidateCreateCustomerAPI@42a48628]" name="validateAPIWithInvalidSecretKey" duration-ms="768" started-at="2019-11-27T06:04:19Z" data-provider="dp" finished-at="2019-11-27T06:04:20Z">
           <params>
             <param index="0">
               <value>
@@ -44,7 +44,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateAPIWithInvalidSecretKey -->
-        <test-method status="PASS" signature="validateAPIWithInvalidSecretKey(java.util.Hashtable)[pri:0, instance:com.w2a.TestJson.ValidateCreateCustomerAPI@42a48628]" name="validateAPIWithInvalidSecretKey" duration-ms="652" started-at="2019-11-26T10:59:26Z" data-provider="dp" finished-at="2019-11-26T10:59:27Z">
+        <test-method status="PASS" signature="validateAPIWithInvalidSecretKey(java.util.Hashtable)[pri:0, instance:TestJson.ValidateCreateCustomerAPI@42a48628]" name="validateAPIWithInvalidSecretKey" duration-ms="876" started-at="2019-11-27T06:04:20Z" data-provider="dp" finished-at="2019-11-27T06:04:21Z">
           <params>
             <param index="0">
               <value>
@@ -55,11 +55,55 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateAPIWithInvalidSecretKey -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.w2a.TestJson.ValidateCreateCustomerAPI@42a48628]" name="tearDown" is-config="true" duration-ms="0" started-at="2019-11-26T10:59:27Z" finished-at="2019-11-26T10:59:27Z">
+        <test-method status="PASS" signature="validateAPIWithValidSecretKey(java.util.Hashtable)[pri:0, instance:TestJson.ValidateCreateCustomerAPI@42a48628]" name="validateAPIWithValidSecretKey" duration-ms="1327" started-at="2019-11-27T06:04:21Z" data-provider="dp" finished-at="2019-11-27T06:04:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{email=rest1@gmail.com, description=Test User as been created}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateAPIWithValidSecretKey -->
+        <test-method status="PASS" signature="validateAPIWithValidSecretKey(java.util.Hashtable)[pri:0, instance:TestJson.ValidateCreateCustomerAPI@42a48628]" name="validateAPIWithValidSecretKey" duration-ms="1328" started-at="2019-11-27T06:04:22Z" data-provider="dp" finished-at="2019-11-27T06:04:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{email=rest2@gmail.com, description=Test User as been created}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateAPIWithValidSecretKey -->
+        <test-method status="PASS" signature="validateAPIWithValidSecretKey(java.util.Hashtable)[pri:0, instance:TestJson.ValidateCreateCustomerAPI@42a48628]" name="validateAPIWithValidSecretKey" duration-ms="1515" started-at="2019-11-27T06:04:24Z" data-provider="dp" finished-at="2019-11-27T06:04:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{email=rest3@gmail.com, description=Test User as been created}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateAPIWithValidSecretKey -->
+        <test-method status="PASS" signature="validateAPIWithValidSecretKey(java.util.Hashtable)[pri:0, instance:TestJson.ValidateCreateCustomerAPI@42a48628]" name="validateAPIWithValidSecretKey" duration-ms="985" started-at="2019-11-27T06:04:25Z" data-provider="dp" finished-at="2019-11-27T06:04:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{email=rest4@gmail.com, description=Test User as been created}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateAPIWithValidSecretKey -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:TestJson.ValidateCreateCustomerAPI@42a48628]" name="tearDown" is-config="true" duration-ms="0" started-at="2019-11-27T06:04:26Z" finished-at="2019-11-27T06:04:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.w2a.TestJson.ValidateCreateCustomerAPI -->
+      </class> <!-- TestJson.ValidateCreateCustomerAPI -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

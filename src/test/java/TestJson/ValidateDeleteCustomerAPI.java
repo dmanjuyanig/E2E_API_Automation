@@ -1,4 +1,4 @@
-package com.w2a.TestJson;
+package TestJson;
 
 public class ValidateDeleteCustomerAPI {
 
