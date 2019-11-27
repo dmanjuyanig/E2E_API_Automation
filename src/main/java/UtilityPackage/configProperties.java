@@ -11,7 +11,7 @@ import org.aeonbits.owner.Config.Sources;
 public interface configProperties extends Config{
 	
 	@Key("baseURI")
-	String getBaseURI();
+	public String getBaseURI();
 	
 	@Key("basePath")
 	String getBasePath();
@@ -24,4 +24,13 @@ public interface configProperties extends Config{
 	
 	@Key("customerAPIEndPoint")
 	String getCustomerAPIEndPoint();
+	
+	@Key("testReportPath")
+	String getTestReportFilepath();
+
+	@Key("testReportName")
+	String getTestReportName();
+	
+	@Key("testDataSheetName")
+	String getTestDataSheetName();
 }

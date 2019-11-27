@@ -5,9 +5,9 @@
     <classes>
       <class name="TestJson.ValidateCreateCustomerAPI">
         <methods>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-          <include name="validateAPIWithInvalidParameter" invocation-numbers="0 1"/>
+          <include name="afterSuite"/>
+          <include name="validateAPIWithoutValidSecretKey"/>
+          <include name="beforeSuite"/>
         </methods>
       </class> <!-- TestJson.ValidateCreateCustomerAPI -->
     </classes>

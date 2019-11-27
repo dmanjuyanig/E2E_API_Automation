@@ -1,109 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="8" passed="8">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="13762" started-at="2019-11-27T07:11:50Z" finished-at="2019-11-27T07:12:04Z">
+  <suite name="Default suite" duration-ms="3165" started-at="2019-11-27T11:06:24Z" finished-at="2019-11-27T11:06:28Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="13762" started-at="2019-11-27T07:11:50Z" finished-at="2019-11-27T07:12:04Z">
-      <class name="TestJson.ValidateCreateCustomerAPI">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:TestJson.ValidateCreateCustomerAPI@409bf450]" name="setUp" is-config="true" duration-ms="650" started-at="2019-11-27T07:11:49Z" finished-at="2019-11-27T07:11:50Z">
+    <test name="Default test" duration-ms="3165" started-at="2019-11-27T11:06:24Z" finished-at="2019-11-27T11:06:28Z">
+      <class name="TestJson.ValidateRetriveCustomerAPI">
+        <test-method status="PASS" signature="ValidateCreateCusAPIWithValidSK()[pri:1, instance:TestJson.ValidateRetriveCustomerAPI@5b87ed94]" name="ValidateCreateCusAPIWithValidSK" duration-ms="3130" started-at="2019-11-27T11:06:24Z" finished-at="2019-11-27T11:06:28Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validateAPIWithValidSecretKey(java.util.Hashtable)[pri:1, instance:TestJson.ValidateCreateCustomerAPI@409bf450]" name="validateAPIWithValidSecretKey" duration-ms="4547" started-at="2019-11-27T07:11:50Z" data-provider="dp" finished-at="2019-11-27T07:11:54Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{email=rest1@gmail.com, description=Test User as been created}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateAPIWithValidSecretKey -->
-        <test-method status="PASS" signature="validateAPIWithValidSecretKey(java.util.Hashtable)[pri:1, instance:TestJson.ValidateCreateCustomerAPI@409bf450]" name="validateAPIWithValidSecretKey" duration-ms="2588" started-at="2019-11-27T07:11:54Z" data-provider="dp" finished-at="2019-11-27T07:11:57Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{email=rest2@gmail.com, description=Test User as been created}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateAPIWithValidSecretKey -->
-        <test-method status="PASS" signature="validateAPIWithInvalidSecretKey(java.util.Hashtable)[pri:2, instance:TestJson.ValidateCreateCustomerAPI@409bf450]" name="validateAPIWithInvalidSecretKey" duration-ms="1037" started-at="2019-11-27T07:11:57Z" data-provider="dp" finished-at="2019-11-27T07:11:58Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{email=rest1@gmail.com, description=Test User is not created}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateAPIWithInvalidSecretKey -->
-        <test-method status="PASS" signature="validateAPIWithInvalidSecretKey(java.util.Hashtable)[pri:2, instance:TestJson.ValidateCreateCustomerAPI@409bf450]" name="validateAPIWithInvalidSecretKey" duration-ms="1245" started-at="2019-11-27T07:11:58Z" data-provider="dp" finished-at="2019-11-27T07:11:59Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{email=rest2@gmail.com, description=Test User is not created}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateAPIWithInvalidSecretKey -->
-        <test-method status="PASS" signature="validateAPIWithValidParameters(java.util.Hashtable)[pri:3, instance:TestJson.ValidateCreateCustomerAPI@409bf450]" name="validateAPIWithValidParameters" duration-ms="1223" started-at="2019-11-27T07:11:59Z" data-provider="dp" finished-at="2019-11-27T07:12:01Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{email=rest1@gmail.com, description=Test User is not created}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateAPIWithValidParameters -->
-        <test-method status="PASS" signature="validateAPIWithValidParameters(java.util.Hashtable)[pri:3, instance:TestJson.ValidateCreateCustomerAPI@409bf450]" name="validateAPIWithValidParameters" duration-ms="956" started-at="2019-11-27T07:12:01Z" data-provider="dp" finished-at="2019-11-27T07:12:01Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{email=rest2@gmail.com, description=Test User is not created}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateAPIWithValidParameters -->
-        <test-method status="PASS" signature="validateAPIWithInvalidParameter(java.util.Hashtable)[pri:4, instance:TestJson.ValidateCreateCustomerAPI@409bf450]" name="validateAPIWithInvalidParameter" duration-ms="1194" started-at="2019-11-27T07:12:01Z" data-provider="dp" finished-at="2019-11-27T07:12:03Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{email=rest1, description=Test User is not created}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateAPIWithInvalidParameter -->
-        <test-method status="PASS" signature="validateAPIWithInvalidParameter(java.util.Hashtable)[pri:4, instance:TestJson.ValidateCreateCustomerAPI@409bf450]" name="validateAPIWithInvalidParameter" duration-ms="904" started-at="2019-11-27T07:12:03Z" data-provider="dp" finished-at="2019-11-27T07:12:04Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{email=rest2, description=Test User is not created}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateAPIWithInvalidParameter -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:TestJson.ValidateCreateCustomerAPI@409bf450]" name="tearDown" is-config="true" duration-ms="0" started-at="2019-11-27T07:12:04Z" finished-at="2019-11-27T07:12:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- TestJson.ValidateCreateCustomerAPI -->
+        </test-method> <!-- ValidateCreateCusAPIWithValidSK -->
+      </class> <!-- TestJson.ValidateRetriveCustomerAPI -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
