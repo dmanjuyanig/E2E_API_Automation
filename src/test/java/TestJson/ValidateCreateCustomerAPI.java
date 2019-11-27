@@ -9,6 +9,7 @@ import APIPackage.CreateCustomerAPI;
 import SetUpPackage.TestSetup;
 import UtilityPackage.DataProviderClass;
 import UtilityPackage.TestUtils;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 
 
@@ -41,22 +42,63 @@ public class ValidateCreateCustomerAPI extends TestSetup{
 		
 		response.prettyPrint();
 		
+		System.out.println(response.statusCode());
+		
 		//Assert to verify the status code
 		Assert.assertEquals(response.statusCode(), 401);
+		
+		JsonPath jsonPathEvaluator = response.jsonPath();
+		System.out.println("Error Message : " + jsonPathEvaluator.get("error.message"));
 		
 		//Assert to json response body contains ID field
 		Assert.assertTrue(TestUtils.jsonHasKey(response.asString(), "error"));
 		
-		//Assert that that ID field is not null
-		String errormessage = response.jsonPath().get("message");
-		System.out.println(errormessage);
-		//Assert.assertNotNull(idValue);
+		//Assert that that ID field is null
+		String idValue = response.jsonPath().get("id");
+		Assert.assertNull(idValue);
 	}
 	
-	@Test
-	public void validateAPIWithValidParameters()
+	@Test(dataProviderClass = DataProviderClass.class, dataProvider="dp")
+	public void validateAPIWithValidParameters(Hashtable<String, String> data)
 	{
+		Response response = CreateCustomerAPI.sendPostRequestToCreateCustomerWithValidSecretKey(data.get("email"), data.get("description"), 
+				config.getValidSecretKey(), config.getCustomerAPIEndPoint());
 		
+		response.prettyPrint();
+		
+		//Assert to verify the status code
+		Assert.assertEquals(response.statusCode(), 200);
+		
+		//Assert to json response body contains ID field
+		Assert.assertTrue(TestUtils.jsonHasKey(response.asString(), "id"));
+		
+		//Assert that that ID field is not null
+		String idValue = response.jsonPath().get("id");
+		Assert.assertNotNull(idValue);
+	}
+	
+	@Test(dataProviderClass = DataProviderClass.class, dataProvider="dp")
+	public void validateAPIWithInvalidParameter(Hashtable<String, String> data)
+	{
+		Response response = CreateCustomerAPI.sendPostRequestToCreateCustomerWithValidSecretKey(data.get("email"), data.get("description"), 
+				config.getValidSecretKey(), config.getCustomerAPIEndPoint());
+		
+		response.prettyPrint();
+		
+		System.out.println(response.statusCode());
+		
+		//Assert to verify the status code
+		Assert.assertEquals(response.statusCode(), 400);
+		
+		JsonPath jsonPathEvaluator = response.jsonPath();
+		System.out.println("Error Message : " + jsonPathEvaluator.get("error.message"));
+		
+		//Assert to json response body contains ID field
+		Assert.assertTrue(TestUtils.jsonHasKey(response.asString(), "error"));
+		
+		//Assert that that ID field is null
+		String idValue = response.jsonPath().get("id");
+		Assert.assertNull(idValue);
 	}
 
 }
